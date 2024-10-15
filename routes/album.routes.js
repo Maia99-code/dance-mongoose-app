@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const albumController = require('../controllers/albumController');
+const albumController = require('../controllers/album.controllers.js');
 
 // Crear un álbum
 router.post('/', albumController.createAlbum);

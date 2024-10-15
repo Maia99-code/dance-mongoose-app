@@ -1,4 +1,4 @@
-const Album = require('../models/album');
+const Album = require('../models/album.models.js');
 
 // Crear un álbum
 const createAlbum = async (req, res) => {

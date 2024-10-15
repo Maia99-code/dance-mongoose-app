@@ -1,16 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const albumRoutes = require('./routes/albums');
+const albumRoutes = require('./routes/album.routes.js');
 
 const app = express();
 app.use(express.json());
 
 // Conexión a MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
+mongoose.connect(process.env.MONGODB_URI)
+.then(() => {
     console.log('Conectado a la base de datos');
 }).catch(err => {
     console.error('Error de conexión a MongoDB', err);
